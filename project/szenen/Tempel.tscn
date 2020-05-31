@@ -1,0 +1,618 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://GDACH/Tempel/mesh/Saule_01.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://GDACH/Tempel/mesh/Tempel_basis.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://GDACH/Tempel/mesh/aa_01_b1.mesh" type="ArrayMesh" id=3]
+[ext_resource path="res://GDACH/Tempel/mesh/aa_01_d1.mesh" type="ArrayMesh" id=4]
+[ext_resource path="res://GDACH/Tempel/mesh/aa_01_w1.mesh" type="ArrayMesh" id=5]
+[ext_resource path="res://GDACH/Tempel/mesh/a_01_a1.mesh" type="ArrayMesh" id=6]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.341047, 1.74682, 1.34141 )
+
+[node name="Tempel" type="Spatial"]
+
+[node name="Tempel_basis" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5118, 0, 1.85193 )
+visible = false
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="aa_01_w1" type="MeshInstance" parent="."]
+transform = Transform( -5.26274e-08, 0, 1.20398, 0, 2.66863, 0, -1.20398, 0, -5.26274e-08, 7.29767, 5.84975, -10.9902 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="aa_01_w1"]
+transform = Transform( -3.63059e-08, 0, -0.830582, 0, 0.374725, 0, 0.830582, 0, -3.63059e-08, 0.021102, 0.0294688, 0.0190811 )
+
+[node name="CollisionShape" type="CollisionShape" parent="aa_01_w1/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="Boden" type="Spatial" parent="."]
+
+[node name="aa_01_b2" type="MeshInstance" parent="Boden"]
+transform = Transform( 1.48761, 0, 0, 0, 1.48761, 0, 0, 0, 1.48761, -3.05272, 4.35757, -11.2841 )
+use_in_baked_light = true
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="aa_01_b3" type="MeshInstance" parent="Boden"]
+transform = Transform( 1.48761, 0, 0, 0, 1.48761, 0, 0, 0, 1.48761, -1.14928, 4.35757, -11.2438 )
+use_in_baked_light = true
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="aa_01_b4" type="MeshInstance" parent="Boden"]
+transform = Transform( -6.50255e-08, 0, -1.48761, 0, 1.48761, 0, 1.48761, 0, -6.50255e-08, 0.752665, 4.35757, -11.1985 )
+use_in_baked_light = true
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="aa_01_b5" type="MeshInstance" parent="Boden"]
+transform = Transform( -6.50255e-08, 0, 1.48761, 0, 1.48761, 0, -1.48761, 0, -6.50255e-08, 2.65461, 4.35757, -11.1683 )
+use_in_baked_light = true
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="aa_01_b6" type="MeshInstance" parent="Boden"]
+transform = Transform( -1.48761, 0, -1.30051e-07, 0, 1.48761, 0, 1.30051e-07, 0, -1.48761, 4.55656, 4.35757, -11.113 )
+use_in_baked_light = true
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="aa_01_b7" type="MeshInstance" parent="Boden"]
+transform = Transform( 1.95076e-07, 0, -1.48761, 0, 1.48761, 0, 1.48761, 0, 1.95076e-07, 6.45348, 4.35757, -11.0727 )
+use_in_baked_light = true
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="aa_01_b8" type="MeshInstance" parent="Boden"]
+transform = Transform( 1.48761, 0, 2.60102e-07, 0, 1.48761, 0, -2.60102e-07, 0, 1.48761, 8.35039, 4.35757, -11.0677 )
+use_in_baked_light = true
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="Wand1" type="Spatial" parent="."]
+transform = Transform( 0.999613, 0, -0.0277995, 0, 1, 0, 0.0277995, 0, 0.999613, -3.38215, 5.00338, -12.1952 )
+
+[node name="aa_01_w2" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0172551, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w3" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29414, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w4" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57103, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w5" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85223, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w6" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.13089, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w7" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.41463, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w8" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69151, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w9" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.96408, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w10" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2453, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w11" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5265, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w21" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0172551, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w20" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29414, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w19" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57103, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w18" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85223, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w17" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.13089, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w16" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.41463, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w15" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69151, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w14" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.96408, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w13" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2453, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w12" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5265, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="a_01_a1" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00369835, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a2" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27961, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a3" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.55553, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a4" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83144, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a5" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.11105, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a6" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.38697, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a7" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.65918, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a8" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9351, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a9" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.211, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a10" type="MeshInstance" parent="Wand1"]
+transform = Transform( 1.04068, 0, 0, 0, 1, 0, 0, 0, 1, 11.5091, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="Wand2" type="Spatial" parent="."]
+transform = Transform( -0.999834, 0, 0.0181852, 0, 1, 0, -0.0181852, 0, -0.999834, 8.15082, 5.00338, -10.1755 )
+
+[node name="aa_01_w2" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0172551, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w3" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29414, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w4" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57103, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w5" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85223, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w6" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.13089, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w7" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.41463, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w8" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69151, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w9" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.96408, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w10" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2453, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w11" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5265, 0, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w21" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0172551, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w20" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29414, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w19" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57103, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w18" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85223, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w17" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.13089, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w16" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.41463, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w15" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69151, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w14" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.96408, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w13" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2453, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="aa_01_w12" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5265, 1.76439, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="a_01_a1" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00369835, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a2" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27961, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a3" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.55553, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a4" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83144, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a5" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.11105, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a6" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.38697, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a7" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.65918, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a8" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.9351, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a9" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.211, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="a_01_a10" type="MeshInstance" parent="Wand2"]
+transform = Transform( 1.04068, 0, 0, 0, 1, 0, 0, 0, 1, 11.5091, 0.558748, -0.000283241 )
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="Decke" type="Spatial" parent="."]
+
+[node name="aa_01_d1" type="MeshInstance" parent="Decke"]
+transform = Transform( 1.32153, 0, 0, 0, 1.32153, 0, 0, 0, 1.46123, -3.17375, 7.27116, -11.3104 )
+use_in_baked_light = true
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="aa_01_d2" type="MeshInstance" parent="Decke"]
+transform = Transform( 1.32153, 0, 0, 0, 1.32153, 0, 0, 0, 1.46123, -1.48979, 7.27116, -11.265 )
+use_in_baked_light = true
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="aa_01_d3" type="MeshInstance" parent="Decke"]
+transform = Transform( 1.32153, 0, 0, 0, 1.32153, 0, 0, 0, 1.46123, 0.187325, 7.27116, -11.2195 )
+use_in_baked_light = true
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="aa_01_d4" type="MeshInstance" parent="Decke"]
+transform = Transform( 1.32153, 0, 0, 0, 1.32153, 0, 0, 0, 1.46123, 1.87129, 7.27116, -11.1742 )
+use_in_baked_light = true
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="aa_01_d5" type="MeshInstance" parent="Decke"]
+transform = Transform( 1.32153, 0, 0, 0, 1.32153, 0, 0, 0, 1.46123, 3.5484, 7.27116, -11.1061 )
+use_in_baked_light = true
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="aa_01_d6" type="MeshInstance" parent="Decke"]
+transform = Transform( 1.32153, 0, 0, 0, 1.32153, 0, 0, 0, 1.46123, 5.21867, 7.27116, -11.0682 )
+use_in_baked_light = true
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="aa_01_d7" type="MeshInstance" parent="Decke"]
+transform = Transform( 1.32153, 0, 0, 0, 1.32153, 0, 0, 0, 1.46123, 6.90263, 7.27116, -11.0607 )
+use_in_baked_light = true
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="aa_01_d8" type="MeshInstance" parent="Decke"]
+transform = Transform( 1.32153, 0, 0, 0, 1.32153, 0, 0, 0, 1.46123, 8.59344, 7.27116, -11.0607 )
+use_in_baked_light = true
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Saulen" type="Spatial" parent="."]
+
+[node name="Saule_01" type="MeshInstance" parent="Saulen"]
+transform = Transform( 1.23398, 0, 0, 0, 1.27949, 0, 0, 0, 1.23398, -4.00889, 5.07804, -12.2823 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_02" type="MeshInstance" parent="Saulen"]
+transform = Transform( -1.23398, 0, -1.07878e-07, 0, 1.27949, 0, 1.07878e-07, 0, -1.23398, -4.00889, 6.7092, -12.2823 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_04" type="MeshInstance" parent="Saulen"]
+transform = Transform( -1.23398, 0, -1.07878e-07, 0, 1.27949, 0, 1.07878e-07, 0, -1.23398, -4.00889, 5.07804, -10.3113 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_03" type="MeshInstance" parent="Saulen"]
+transform = Transform( 1.23398, 0, 2.15756e-07, 0, 1.27949, 0, -2.15756e-07, 0, 1.23398, -4.00889, 6.7092, -10.3113 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_08" type="MeshInstance" parent="Saulen"]
+transform = Transform( 1.23398, 0, 0, 0, 1.27949, 0, 0, 0, 1.23398, -0.557233, 5.07804, -12.2084 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_07" type="MeshInstance" parent="Saulen"]
+transform = Transform( -1.23398, 0, -1.07878e-07, 0, 1.27949, 0, 1.07878e-07, 0, -1.23398, -0.557233, 6.7092, -12.2084 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_06" type="MeshInstance" parent="Saulen"]
+transform = Transform( -1.23398, 0, -1.07878e-07, 0, 1.27949, 0, 1.07878e-07, 0, -1.23398, -0.557233, 5.07804, -10.2374 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_05" type="MeshInstance" parent="Saulen"]
+transform = Transform( 1.23398, 0, 2.15756e-07, 0, 1.27949, 0, -2.15756e-07, 0, 1.23398, -0.557233, 6.7092, -10.2374 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_12" type="MeshInstance" parent="Saulen"]
+transform = Transform( 1.23398, 0, 0, 0, 1.27949, 0, 0, 0, 1.23398, 2.42104, 5.07804, -12.1227 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_11" type="MeshInstance" parent="Saulen"]
+transform = Transform( -1.23398, 0, -1.07878e-07, 0, 1.27949, 0, 1.07878e-07, 0, -1.23398, 2.42104, 6.7092, -12.1227 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_10" type="MeshInstance" parent="Saulen"]
+transform = Transform( -1.23398, 0, -1.07878e-07, 0, 1.27949, 0, 1.07878e-07, 0, -1.23398, 2.42104, 5.07804, -10.1707 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_09" type="MeshInstance" parent="Saulen"]
+transform = Transform( 1.23398, 0, 2.15756e-07, 0, 1.27949, 0, -2.15756e-07, 0, 1.23398, 2.42104, 6.7092, -10.1707 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_16" type="MeshInstance" parent="Saulen"]
+transform = Transform( 1.23398, 0, 0, 0, 1.27949, 0, 0, 0, 1.23398, 5.18889, 5.07804, -12.0411 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_15" type="MeshInstance" parent="Saulen"]
+transform = Transform( -1.23398, 0, -1.07878e-07, 0, 1.27949, 0, 1.07878e-07, 0, -1.23398, 5.18889, 6.7092, -12.0411 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_14" type="MeshInstance" parent="Saulen"]
+transform = Transform( -1.23398, 0, -1.07878e-07, 0, 1.27949, 0, 1.07878e-07, 0, -1.23398, 5.18889, 5.07804, -10.1381 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_13" type="MeshInstance" parent="Saulen"]
+transform = Transform( 1.23398, 0, 2.15756e-07, 0, 1.27949, 0, -2.15756e-07, 0, 1.23398, 5.18889, 6.7092, -10.1381 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_20" type="MeshInstance" parent="Saulen"]
+transform = Transform( 1.23398, 0, 0, 0, 1.27949, 0, 0, 0, 1.23398, 8.67845, 5.07804, -11.9584 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_19" type="MeshInstance" parent="Saulen"]
+transform = Transform( -1.23398, 0, -1.07878e-07, 0, 1.27949, 0, 1.07878e-07, 0, -1.23398, 8.67845, 6.7092, -11.9584 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_18" type="MeshInstance" parent="Saulen"]
+transform = Transform( -1.23398, 0, -1.07878e-07, 0, 1.27949, 0, 1.07878e-07, 0, -1.23398, 8.67845, 5.07804, -10.0704 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Saule_17" type="MeshInstance" parent="Saulen"]
+transform = Transform( 1.23398, 0, 2.15756e-07, 0, 1.27949, 0, -2.15756e-07, 0, 1.23398, 8.67845, 6.7092, -10.0704 )
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.424974, 0.905206, 0, -0.905206, 0.424974, 0, 8.49918, 0 )
+visible = false
+shadow_enabled = true
+directional_shadow_normal_bias = 0.0
