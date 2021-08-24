@@ -1,0 +1,82 @@
+[gd_scene load_steps=21 format=3 uid="uid://k52asle7hqv6"]
+
+[ext_resource type="PackedScene" uid="uid://od1iquuawwil" path="res://gltf/Light.gltf" id="1_ip25r"]
+[ext_resource type="PackedScene" uid="uid://y53digt82j1" path="res://szenen/Level1.tscn" id="3_8pk0w"]
+[ext_resource type="PackedScene" uid="uid://bnd6uj1jr3c3o" path="res://szenen/Statuen.tscn" id="4_0dlmn"]
+[ext_resource type="PackedScene" uid="uid://dt5gbggmcca4d" path="res://szenen/Level2.tscn" id="6_kihlu"]
+[ext_resource type="PackedScene" uid="uid://yojsq71uvc4f" path="res://szenen/Level3.tscn" id="7_dbenk"]
+[ext_resource type="PackedScene" uid="uid://douh7rpoujwl8" path="res://szenen/Tempel.tscn" id="8_fl0re"]
+[ext_resource type="PackedScene" uid="uid://dndrgauda70g7" path="res://gltf/Boden.gltf" id="8_plr7r"]
+[ext_resource type="PackedScene" uid="uid://cdvgoc4nx6k1g" path="res://gltf/Saulen.gltf" id="9_6uh7b"]
+[ext_resource type="PackedScene" uid="uid://bhjadflmk7oqr" path="res://gltf/Deko.gltf" id="10_c2h11"]
+[ext_resource type="PackedScene" uid="uid://yayj6e14b2vk" path="res://gltf/Wand1.gltf" id="11_wlj4s"]
+[ext_resource type="PackedScene" uid="uid://dj6mugtrrv0mx" path="res://gltf/Wand2.gltf" id="12_yhkhx"]
+[ext_resource type="PackedScene" uid="uid://cdku4848p0j1k" path="res://gltf/Decke.gltf" id="13_8qbmw"]
+[ext_resource type="PackedScene" uid="uid://djjwpxh6cgwy3" path="res://szenen/Info.tscn" id="15_ra4eg"]
+[ext_resource type="PackedScene" uid="uid://bmj3gkbqno6g5" path="res://szenen/Player.tscn" id="16_3ty8y"]
+[ext_resource type="Script" path="res://skript/Info.gd" id="16_xwjvh"]
+
+[sub_resource type="Curve" id="Curve_4fbft"]
+_data = [Vector2(0, 0), 0.0, 0.42396, 0, 0, Vector2(1, 1), 1.7625, 0.0, 0, 0]
+
+[sub_resource type="CurveTexture" id="CurveTexture_ooy3j"]
+curve = SubResource( "Curve_4fbft" )
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jfyd1"]
+sky_top_color = Color(0.647059, 0.839216, 0.945098, 1)
+sky_horizon_color = Color(0.839216, 0.917647, 0.980392, 1)
+ground_bottom_color = Color(0.156863, 0.184314, 0.211765, 1)
+ground_horizon_color = Color(0.423529, 0.396078, 0.372549, 1)
+sun_angle_max = 20.0
+
+[sub_resource type="Sky" id="Sky_2igup"]
+sky_material = SubResource( "ProceduralSkyMaterial_jfyd1" )
+radiance_size = 2
+
+[sub_resource type="Environment" id="Environment_10aoi"]
+background_mode = 2
+sky = SubResource( "Sky_2igup" )
+ambient_light_color = Color(0.431373, 0.419608, 0.419608, 1)
+ambient_light_occlusion_color = Color(1, 1, 1, 1)
+tonemap_white = 0.0
+adjustment_enabled = true
+adjustment_color_correction = SubResource( "CurveTexture_ooy3j" )
+
+[node name="Main" type="Node3D"]
+script = null
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( "Environment_10aoi" )
+script = null
+
+[node name="Light" parent="." instance=ExtResource( "1_ip25r" )]
+
+[node name="World" type="Node3D" parent="."]
+script = null
+
+[node name="Level1" parent="World" instance=ExtResource( "3_8pk0w" )]
+
+[node name="Level2" parent="World" instance=ExtResource( "6_kihlu" )]
+
+[node name="Level3" parent="World" instance=ExtResource( "7_dbenk" )]
+
+[node name="Tempel" parent="World" instance=ExtResource( "8_fl0re" )]
+
+[node name="Statuen" parent="World" instance=ExtResource( "4_0dlmn" )]
+
+[node name="Boden" parent="World" instance=ExtResource( "8_plr7r" )]
+
+[node name="Saulen" parent="World" instance=ExtResource( "9_6uh7b" )]
+
+[node name="Deko" parent="World" instance=ExtResource( "10_c2h11" )]
+
+[node name="Wand" parent="World" instance=ExtResource( "11_wlj4s" )]
+
+[node name="Wand2" parent="World" instance=ExtResource( "12_yhkhx" )]
+
+[node name="Decke" parent="World" instance=ExtResource( "13_8qbmw" )]
+
+[node name="Info" parent="." instance=ExtResource( "15_ra4eg" )]
+script = ExtResource( "16_xwjvh" )
+
+[node name="Player" parent="." instance=ExtResource( "16_3ty8y" )]

@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://djjwpxh6cgwy3"]
+
+[node name="Info" type="CanvasLayer"]
+script = null
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+offset_right = 1.0
+offset_bottom = 131.0
+script = null
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+offset_right = 1.0
+offset_bottom = 131.0
+script = null
+
+[node name="fpsLabel" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+offset_right = 1.0
+offset_bottom = 23.0
+structured_text_bidi_override_options = []
+script = null
+
+[node name="vertices" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+offset_top = 27.0
+offset_right = 1.0
+offset_bottom = 50.0
+structured_text_bidi_override_options = []
+script = null
+
+[node name="timeProcess" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+offset_top = 54.0
+offset_right = 1.0
+offset_bottom = 77.0
+structured_text_bidi_override_options = []
+script = null
+
+[node name="drawCalls" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+offset_top = 81.0
+offset_right = 1.0
+offset_bottom = 104.0
+structured_text_bidi_override_options = []
+script = null
+
+[node name="memory" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+offset_top = 108.0
+offset_right = 1.0
+offset_bottom = 131.0
+structured_text_bidi_override_options = []
+script = null
