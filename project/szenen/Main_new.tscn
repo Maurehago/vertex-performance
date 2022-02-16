@@ -37,22 +37,18 @@ radiance_size = 2
 background_mode = 2
 sky = SubResource( "Sky_2igup" )
 ambient_light_color = Color(0.431373, 0.419608, 0.419608, 1)
-ambient_light_occlusion_color = Color(1, 1, 1, 1)
 tonemap_white = 0.0
 adjustment_enabled = true
 adjustment_color_correction = SubResource( "CurveTexture_ooy3j" )
 
 [node name="Main" type="Node3D"]
-script = null
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( "Environment_10aoi" )
-script = null
 
 [node name="Light" parent="." instance=ExtResource( "1_ip25r" )]
 
 [node name="World" type="Node3D" parent="."]
-script = null
 
 [node name="Level1" parent="World" instance=ExtResource( "3_8pk0w" )]
 
