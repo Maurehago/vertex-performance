@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmj3gkbqno6g5"]
+
+[ext_resource type="Script" path="res://skript/Player.gd" id="1_alk1s"]
+[ext_resource type="PackedScene" uid="uid://bmltunsu47la3" path="res://gltf/player_mesh.gltf" id="2_qqe2b"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3hhnk"]
+radius = 0.2
+
+[node name="Player" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.816, 2.7983, 1.973)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_alk1s")
+
+[node name="player_mesh" parent="RigidBody3D" instance=ExtResource("2_qqe2b")]
+
+[node name="OmniLight" type="OmniLight3D" parent="RigidBody3D"]
+light_energy = 5.0
+light_indirect_energy = 0.0
+omni_range = 1.0
+omni_attenuation = 1.61369
+
+[node name="collision" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("SphereShape3D_3hhnk")
+
+[node name="cambase" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="cambase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.341691, 1.2601)
