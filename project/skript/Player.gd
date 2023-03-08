@@ -1,4 +1,4 @@
-extends RigidDynamicBody3D
+extends RigidBody3D
 var move : Vector3 = Vector3(0,0,0)
 var rotate: Vector3 = Vector3(0,0,0)
 var camera_rotate: Vector3 = Vector3(0,0,0)
@@ -11,10 +11,10 @@ func _ready():
 func _physics_process(_delta):
 	get_parent().get_node("cambase").position = self.position
 	if Input.is_action_pressed("view_up"):
-		if camera_rotate.x <= deg2rad(90):
+		if camera_rotate.x <= deg_to_rad(90):
 			camera_rotate.x = camera_rotate.x+0.02
 	elif Input.is_action_pressed("view_down"):
-		if camera_rotate.x >= -deg2rad(90):
+		if camera_rotate.x >= -deg_to_rad(90):
 			camera_rotate.x = camera_rotate.x-0.02
 	if Input.is_action_pressed("view_right"):
 		rotate.y = rotate.y-0.04

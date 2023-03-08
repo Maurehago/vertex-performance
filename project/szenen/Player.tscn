@@ -9,12 +9,12 @@ radius = 0.2
 [node name="Player" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.816, 2.7983, 1.973)
 
-[node name="RigidBody3D" type="RigidDynamicBody3D" parent="."]
-contacts_reported = 1
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+max_contacts_reported = 1
 contact_monitor = true
-script = ExtResource( "1_alk1s" )
+script = ExtResource("1_alk1s")
 
-[node name="player_mesh" parent="RigidBody3D" instance=ExtResource( "2_qqe2b" )]
+[node name="player_mesh" parent="RigidBody3D" instance=ExtResource("2_qqe2b")]
 
 [node name="OmniLight" type="OmniLight3D" parent="RigidBody3D"]
 light_energy = 5.0
@@ -23,7 +23,7 @@ omni_range = 1.0
 omni_attenuation = 1.61369
 
 [node name="collision" type="CollisionShape3D" parent="RigidBody3D"]
-shape = SubResource( "SphereShape3D_3hhnk" )
+shape = SubResource("SphereShape3D_3hhnk")
 
 [node name="cambase" type="Node3D" parent="."]
 
