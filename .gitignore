@@ -11,3 +11,6 @@ data_*/
 
 # Source Import ausschliessen
 _import/
+
+# Blender Backup
+*.blend1
