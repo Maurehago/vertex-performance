@@ -3,5 +3,7 @@
 [resource]
 resource_name = "concrete2"
 cull_mode = 2
+diffuse_mode = 3
+specular_mode = 2
 vertex_color_use_as_albedo = true
 albedo_color = Color(1, 0.462745, 0.0313726, 1)
